@@ -6,6 +6,7 @@ from libs.daten import speichern
 
 app = Flask("Kursfinder")
 
+# git test
 
 @app.route('/')
 def start():
