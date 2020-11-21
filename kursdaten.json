@@ -1,0 +1,29 @@
+{
+    "keiner": {
+    "Jahrgang": -,
+    "Kurs": -,
+    "Gültigkeit": -,
+},
+
+    "Futurakurs": {
+  "Jahrgang": 2005,
+  "Kurs": "keiner",
+  "Gültigkeit": immer,
+  },
+
+    "Basiskurs": {
+  "Jahrgang": 2004,
+  "Kurs": "Futurakurs",
+  "Gültigkeit": 2,
+    },
+
+    "Aufbaukurs": {
+  "Jahrgang": 2003,
+  "Gültigkeit": 2,
+    },
+
+    "Panoramakurs": {
+  "Jahrgang": 2002,
+  "Gültigkeit": 2,
+    },
+

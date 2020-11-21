@@ -6,6 +6,7 @@ from libs.daten import speichern
 
 app = Flask("Kursfinder")
 
+
 # git test
 
 @app.route('/')
@@ -19,14 +20,16 @@ def start():
 @app.route('/eingabe', methods=['POST', 'GET'])
 def eingabe():
     if request.method == "POST":
-        nummer = request.form['nummer_input']
+        name = request.form['name_input']
         jahrgang = request.form['jahrgang']
         kurs = request.form['kurs']
         jahr = request.form['jahr']
-        antwort = speichern(nummer, jahrgang, kurs, jahr)
+        antwort = speichern(name, jahrgang, kurs, jahr)
         return 'Gespeicherete Daten: <br>' + str(antwort)
     return render_template('eingabe.html', app_name="Kursfinder - Eingabe")
 
 
+
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
+

@@ -2,14 +2,14 @@ import json
 
 
 # Funktion zum Speichern des Eintrags
-def speichern(nummer, jahrgang, kurs, jahr):
+def speichern(name, jahrgang, kurs, jahr):
     try:
         with open("datenbank.json", "r") as datenbank:
             eintraege = json.load(datenbank)
     except:
         eintraege = []
 
-    new_entry = {"Name": nummer, "Jahrgang": jahrgang, "Kurs": kurs, "Jahr": jahr}
+    new_entry = {"Name": name, "Jahrgang": jahrgang, "Kurs": kurs, "Jahr": jahr}
     eintraege.append(new_entry)
 
 
@@ -17,7 +17,14 @@ def speichern(nummer, jahrgang, kurs, jahr):
         json.dump(eintraege, datenbank, indent=4)
     return "Daten gespeichert"
 
+def laden ():
+    try:
+        with open("datenbank.json", "r") as datenbank:
+            eintraege = json.load(datenbank)
+    except:
+        eintraege = []
 
+    return eintraege
 
 """
 import json

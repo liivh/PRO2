@@ -1,22 +1,40 @@
+{% include "nav.html" %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Required meta tags -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-with, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
     <title>{{ app_name }}</title>
 </head>
 <body>
-    <form method = "post">
-        <input type="text" name="nummer_input" placeholder="Deine Nummer">
+<form method="POST">
+        <input type="text" name="name_input" placeholder="Dein Pfadiname">
         <br>
         <input type="text" name="jahrgang" placeholder="Welcher Jahrgang hast du?">
         <br>
-        <input type="text" name="kurs" placeholder="Welcher Kurs hast du als letztes gemacht?">
+
+        <label for="kurs">Dein letzter Kurs?</label>
+        <br>
+        <select name="kurs" id="kurs">
+            <option value="keiner">keiner</option>
+            <option value="Futurakurs">Futurakurs</option>
+            <option value="Basiskurs">Basiskurs</option>
+            <option value="Aufbaukurs">Aufbaukurs</option>
+            <option value="Panoramakurs">Panoramakurs</option>
+        </select>
         <br>
         <input type="text" name="jahr" placeholder="In welchem Jahr hast du diesen Kurs gemacht?">
         <br>
-        <button type="submit">Aktivität speichern</button>
+        <button type="submit">Eingabe speichern</button>
     </form>
 
 
 </body>
 </html>
+
+{% include "footer.html" %}
