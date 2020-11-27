@@ -1,29 +1,36 @@
 {
-    "keiner": {
+      "keiner": {
     "Jahrgang": -,
-    "Kurs": -,
     "Gültigkeit": -,
+    "Voraussetzung": ,
+    "Fortsetzung":
 },
 
     "Futurakurs": {
   "Jahrgang": 2005,
-  "Kurs": "keiner",
-  "Gültigkeit": immer,
+  "Gültigkeit": "immer",
+  "Voraussetzung": "keine",
+  "Fortsetzung": "Basiskurs"
   },
 
     "Basiskurs": {
   "Jahrgang": 2004,
-  "Kurs": "Futurakurs",
   "Gültigkeit": 2,
+  "Voraussetzung": "Futurakurs",
+  "Fortsetzung": "Aufbaukurs"
     },
 
     "Aufbaukurs": {
   "Jahrgang": 2003,
   "Gültigkeit": 2,
+  "Voraussetzung": "Basiskurs",
+  "Fortsetzung": "Panoramakurs"
     },
 
     "Panoramakurs": {
   "Jahrgang": 2002,
   "Gültigkeit": 2,
+  "Voraussetzung": "Aufbaukurs",
+  "Fortsetzung": "AL-Kurs"
     },
 

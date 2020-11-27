@@ -8,11 +8,11 @@
 </head>
 <body>
 
-    <h1>{{ ueberschrift }}</h1>
-    <p>{{ einleitung }}</p>
-    {% for eintrag in daten %}
-       {{ eintrag[0] }} für {{ eintrag[1] }} Minuten <br>
-    {% endfor %}
+<h1>{{ ueberschrift }}</h1>
+<p>{{ einleitung }}</p>
+{% for eintrag in daten %}
+{{ eintrag[0] }} für {{ eintrag[1] }} Minuten <br>
+{% endfor %}
 
 
 </body>
