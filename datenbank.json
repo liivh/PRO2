@@ -4,5 +4,17 @@
         "Jahrgang": "1999",
         "Kurs": "Futurakurs",
         "Jahr": "2017"
+    },
+    {
+        "Name": "keck",
+        "Jahrgang": "1997",
+        "Kurs": "keiner",
+        "Jahr": "2000"
+    },
+    {
+        "Name": "falena",
+        "Jahrgang": "2000",
+        "Kurs": "Basiskurs",
+        "Jahr": "2016"
     }
 ]
