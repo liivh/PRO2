@@ -16,5 +16,29 @@
         "Jahrgang": "2000",
         "Kurs": "Basiskurs",
         "Jahr": "2016"
+    },
+    {
+        "Name": "karin",
+        "Jahrgang": "1993",
+        "Kurs": "Aufbaukurs",
+        "Jahr": "2016"
+    },
+    {
+        "Name": "tara",
+        "Jahrgang": "2000",
+        "Kurs": "Basiskurs",
+        "Jahr": "2019"
+    },
+    {
+        "Name": "akila",
+        "Jahrgang": "2001",
+        "Kurs": "Basiskurs",
+        "Jahr": "2019"
+    },
+    {
+        "Name": "Wuika",
+        "Jahrgang": "2001",
+        "Kurs": "Futurakurs",
+        "Jahr": "2015"
     }
 ]

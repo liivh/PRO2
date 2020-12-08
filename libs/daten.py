@@ -17,49 +17,26 @@ def speichern(name, jahrgang, kurs, jahr):
         json.dump(eintraege, datenbank, indent=4)
     return "Daten gespeichert"
 
-def laden ():
+def laden_datenbank():
     try:
-        with open("datenbank.json", "r") as datenbank:
-            eintraege = json.load(datenbank)
+        with open("datenbank.json", "r") as datenbank_datenbank:
+            eintraege_datenbank = json.load(datenbank_datenbank)
     except:
-        eintraege = []
+        eintraege_datenbank = {}
 
-    return eintraege
-"""
-def kursangebot_oeffnen():
+    return eintraege_datenbank
+
+def laden_kursdaten():
     try:
-        with open("datenbank.json", "r", encoding="utf-8") as datenbank_kursangebot:
-            kursangebot = json.load(datenbank_kursangebot)
+        with open("kursdaten.json", "r") as datenbank_kursdaten:
+            eintraege_kursdaten = json.load(datenbank_kursdaten)
     except:
-        kursangebot = {}
-    return kursangebot
+        eintraege_kursdaten = {}
+    return eintraege_kursdaten
 
-def kursangebot_speichern(kursname_kursangebot_antwort,
-                          jahrgang_antwort,
-                          gueltigkeit_antwort,
-                          voraussetzung_antwort,
-                          fortsetzung_antwort):
-    kursangebot = kursangebot_oeffnen()
+def filter():
+    eintraege_datenbank = laden()
+    eintraege_kursdaten = laden()
 
-    kursangebot = {
-        name_kursangebot_antwort:{
-            "kursname": kursname_kursangebot_antwort,
-            "jahrgang": jahrgang_antwort,
-            "voraussetzung": voraussetzung_antwort,
-            "fortsetzung": fortsetzung_antwort,
-        }
-    }
-kursangebot_update(kursangebot)
 
-with open("datenbank.json", "w") as datenbank_kursangebot:
-    json.dump(kursangebot, datenbank)
-
-return
-    name_kursangebot_antwort, \
-    jahrgang_antwort, \
-    gueltigkeit_antwort, \
-    voraussetzung_antwort, \
-    fortsetzung_antwort
-
-"""
 

@@ -7,6 +7,23 @@ from libs.daten import speichern
 
 app = Flask("Kursfinder")
 
+def load_data_json(pfad, standard_wert = []):
+    #Quelle: https://stackabuse.com/reading-and-writing-json-to-a-file-in-python/ & https://www.programiz.com/python-programming/json
+    #das JSONFile wird im read.modus "r" geöffnet, "w" würde das gesamte File löschen.
+    #das JSONFile wird in ein Dict umgewandelt, damit mir der Sucheingabe darin gesucht werden kann.
+    try:
+        with open(pfad, "r") as datei:
+            return json.load(datei)
+    except Exception:
+        return standard_wert
+
+def write_data_to_json(pfad, daten):
+    #Quelle: https://stackoverflow.com/questions/17043860/how-to-dump-a-dict-to-a-json-file
+    #dump dient zum in eine datei zum reinschreiben
+    with open(pfad, "w") as datei:
+        #Quelle: https://pynative.com/python-prettyprint-json-data/
+        #ident=4 dient zum JSON File "schöner" anzuzeigen
+        json.dump(daten, datei, indent=4)
 
 @app.route('/')
 def start():
@@ -27,24 +44,25 @@ def eingabe():
     return render_template('eingabe.html', app_name="Kursfinder - Eingabe")
 
 
-"""
-@app.route('/kursangebot', methods=['POST', 'GET'])
-def kursangebot():
+
+@app.route('/empfehlung', methods=['POST', 'GET'])
+def empfehlung():
     if request.method == 'POST':
-        kursangebot = request.form
-        print (kursangebot)
-        komplettes_kursangebot = read_data_from_json("datenbank.json")
-        jahrgang = kursangebot['Jahrgang']
-        kurs = kursangebot['Kurs']
-        jahr = kursangebot['Jahr']
+        empfehlung = request.form['empfehlung']
+        print (empfehlung)
+        komplettes_kursangebot = load_data_json("kursdaten.json")
+        """
+        jahrgang = empfehlung['jahrgang']
+        kurs = empfehlung['kurs']
+        jahr = empfehlung['jahr']
         liste = []
-
-        for eintrag in komplettes_kursangebot:
-            if eintrag["jahrgang"] == range(0,2004) and eintrag["kurs"] == 'Basiskurs':
-
 """
-
-
+        for eintrag in komplettes_kursangebot:
+            if eintrag == "empfehlung":
+                """
+        return "fortsetzung"
+    return render_template('empfehlung.html', app_name="Kursfinder - Kursangebot")
+"""
 
 
 if __name__ == "__main__":

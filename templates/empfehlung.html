@@ -12,7 +12,18 @@
     <title>{{ app_name }}</title>
 </head>
 
-<body>
+ <div class="table table-bordered table-light">
+            <table border=0>
+                <thead>
+                <tr>
+                    <th scope="col">name</th>
+                    <th scope="col">jahrgang</th>
+                    <th scope="col">kurs</th>
+                    <th scope="col">jahr</th>
+                </tr>
+                </thead>
+
+
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -23,3 +34,6 @@
         crossorigin="anonymous"></script>
 <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
 </body>
+
+{% endblock content %}
+{% include "footer.html" %}
