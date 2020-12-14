@@ -1,36 +1,37 @@
-{
-      "keiner": {
-    "Jahrgang": -,
-    "Gültigkeit": -,
-    "Voraussetzung": ,
-    "Fortsetzung":
-},
-
-    "Futurakurs": {
-  "Jahrgang": 2005,
-  "Gültigkeit": "immer",
-  "Voraussetzung": "keine",
-  "Fortsetzung": "Basiskurs"
-  },
-
-    "Basiskurs": {
-  "Jahrgang": 2004,
-  "Gültigkeit": 2,
-  "Voraussetzung": "Futurakurs",
-  "Fortsetzung": "Aufbaukurs"
+[
+    {
+        "name": "Futurakurs",
+        "jahrgang": 2005,
+        "gueltigkeit": "immer",
+        "voraussetzung": "keine",
+        "fortsetzung": "Basiskurs"
     },
-
-    "Aufbaukurs": {
-  "Jahrgang": 2003,
-  "Gültigkeit": 2,
-  "Voraussetzung": "Basiskurs",
-  "Fortsetzung": "Panoramakurs"
+    {
+        "name": "Basiskurs",
+        "jahrgang": 2004,
+        "gueltigkeit": 2,
+        "voraussetzung": "Futurakurs",
+        "fortsetzung": "Aufbaukurs"
     },
-
-    "Panoramakurs": {
-  "Jahrgang": 2002,
-  "Gültigkeit": 2,
-  "Voraussetzung": "Aufbaukurs",
-  "Fortsetzung": "AL-Kurs"
+    {
+        "name": "Sicherheitsmodul",
+        "jahrgang": 2004,
+        "gueltigkeit": 2,
+        "voraussetzung": "Basiskurs",
+        "fortsetzung": "Aufbaukurs"
     },
-
+    {
+        "name": "Aufbaukurs",
+        "jahrgang": 2003,
+        "gueltigkeit": 2,
+        "voraussetzung": "Basiskurs",
+        "fortsetzung": "Panoramakurs"
+    },
+    {
+        "name": "Panoramakurs",
+        "jahrgang": 2002,
+        "gueltigkeit": 2,
+        "voraussetzung": "Aufbaukurs",
+        "fortsetzung": "AL-Kurs"
+    }
+]

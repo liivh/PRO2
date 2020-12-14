@@ -2,28 +2,10 @@ from flask import Flask
 from flask import render_template
 from flask import request
 
-
-from libs.daten import speichern
+from libs.daten import *
 
 app = Flask("Kursfinder")
 
-def load_data_json(pfad, standard_wert = []):
-    #Quelle: https://stackabuse.com/reading-and-writing-json-to-a-file-in-python/ & https://www.programiz.com/python-programming/json
-    #das JSONFile wird im read.modus "r" geöffnet, "w" würde das gesamte File löschen.
-    #das JSONFile wird in ein Dict umgewandelt, damit mir der Sucheingabe darin gesucht werden kann.
-    try:
-        with open(pfad, "r") as datei:
-            return json.load(datei)
-    except Exception:
-        return standard_wert
-
-def write_data_to_json(pfad, daten):
-    #Quelle: https://stackoverflow.com/questions/17043860/how-to-dump-a-dict-to-a-json-file
-    #dump dient zum in eine datei zum reinschreiben
-    with open(pfad, "w") as datei:
-        #Quelle: https://pynative.com/python-prettyprint-json-data/
-        #ident=4 dient zum JSON File "schöner" anzuzeigen
-        json.dump(daten, datei, indent=4)
 
 @app.route('/')
 def start():
@@ -35,34 +17,40 @@ def start():
 @app.route('/eingabe', methods=['POST', 'GET'])
 def eingabe():
     if request.method == "POST":
-        name = request.form['name_input']
-        jahrgang = request.form['jahrgang']
-        kurs = request.form['kurs']
-        jahr = request.form['jahr']
-        antwort = speichern(name, jahrgang, kurs, jahr)
-        return 'Gespeicherete Daten: <br>' + str(antwort)
-    return render_template('eingabe.html', app_name="Kursfinder - Eingabe")
-
+        email = request.form['input_email']
+        name = request.form['input_name']
+        jahrgang = request.form['input_jahrgang']
+        kurs = request.form['input_kurs']
+        jahr = request.form['input_jahr']
+        speichern(str(email), name, jahrgang, kurs, jahr)
+        recs_list = get_recs(email)
+        return render_template('empfehlung.html', app_name="Kursfinder - Empfehlung", recs_list=recs_list)
+    return render_template('eingabe.html', app_name="Kursfinder - Eingabe", kurse=laden_kursdaten())
 
 
 @app.route('/empfehlung', methods=['POST', 'GET'])
 def empfehlung():
-    if request.method == 'POST':
-        empfehlung = request.form['empfehlung']
-        print (empfehlung)
-        komplettes_kursangebot = load_data_json("kursdaten.json")
-        """
-        jahrgang = empfehlung['jahrgang']
-        kurs = empfehlung['kurs']
-        jahr = empfehlung['jahr']
-        liste = []
-"""
-        for eintrag in komplettes_kursangebot:
-            if eintrag == "empfehlung":
-                """
-        return "fortsetzung"
-    return render_template('empfehlung.html', app_name="Kursfinder - Kursangebot")
-"""
+    if request.method == "POST":
+        email = request.form['input_email']
+        if check_email(email) is False:
+            return render_template('eingabe.html', app_name="Kursfinder - Empfehlung", error="E-Mail nicht vorhanden. Zuerst registrieren!")
+        recs_list = get_recs(email)
+        return render_template('empfehlung.html', app_name="Kursfinder - Empfehlung", recs_list=recs_list)
+    return render_template('empfehlung.html', app_name="Kursfinder - Empfehlung")
+
+
+@app.route('/neuer_kurs', methods=['POST', 'GET'])
+def neuer_kurs():
+    if request.method == "POST":
+        name = request.form['input_name']
+        jahrgang = request.form['input_jahrgang']
+        gueltigkeit = request.form['input_gueltigkeit']
+        voraussetzung = request.form['input_voraussetzung']
+        fortsetzung = request.form['input_fortsetzung']
+        kurs_speichern(name, jahrgang, gueltigkeit, voraussetzung, fortsetzung)
+        success = f"Kurs gespeichert: Kursname: {name}, Jahrgang: {jahrgang}, Gültigkeit: {gueltigkeit}, Voraussetzung: {voraussetzung}, Fortsetzung: {fortsetzung}"
+        return render_template('neuer_kurs.html', app_name="Kursfinder - Neuer Kurs", success=success)
+    return render_template('neuer_kurs.html', app_name="Kursfinder - Neuer Kurs")
 
 
 if __name__ == "__main__":

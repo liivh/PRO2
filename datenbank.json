@@ -1,44 +1,14 @@
-[
-    {
-        "Name": "nadine",
-        "Jahrgang": "1999",
-        "Kurs": "Futurakurs",
-        "Jahr": "2017"
+{
+    "meret.andrini@gmail.com": {
+        "name": "akila",
+        "jahrgang": "2001",
+        "kurs": "Basiskurs",
+        "jahr": "2019"
     },
-    {
-        "Name": "keck",
-        "Jahrgang": "1997",
-        "Kurs": "keiner",
-        "Jahr": "2000"
-    },
-    {
-        "Name": "falena",
-        "Jahrgang": "2000",
-        "Kurs": "Basiskurs",
-        "Jahr": "2016"
-    },
-    {
-        "Name": "karin",
-        "Jahrgang": "1993",
-        "Kurs": "Aufbaukurs",
-        "Jahr": "2016"
-    },
-    {
-        "Name": "tara",
-        "Jahrgang": "2000",
-        "Kurs": "Basiskurs",
-        "Jahr": "2019"
-    },
-    {
-        "Name": "akila",
-        "Jahrgang": "2001",
-        "Kurs": "Basiskurs",
-        "Jahr": "2019"
-    },
-    {
-        "Name": "Wuika",
-        "Jahrgang": "2001",
-        "Kurs": "Futurakurs",
-        "Jahr": "2015"
+    "tara@tara.com": {
+        "name": "tara",
+        "jahrgang": "2001",
+        "kurs": "Basiskurs",
+        "jahr": "2020"
     }
-]
+}

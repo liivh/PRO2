@@ -1,39 +1,15 @@
-{% include "nav.html" %}
+<!-- import base html -->
+{% extends "scaffold.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-with, initial-scale=1, shrink-to-fit=no">
+{% block content %}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
-    <title>{{ app_name }}</title>
-</head>
+    <!-- start of content -->
 
- <div class="table table-bordered table-light">
-            <table border=0>
-                <thead>
-                <tr>
-                    <th scope="col">name</th>
-                    <th scope="col">jahrgang</th>
-                    <th scope="col">kurs</th>
-                    <th scope="col">jahr</th>
-                </tr>
-                </thead>
+    <h1>Deine Empfehlungen</h1>
+
+    {{ recs_list }}
+
+    <!-- end of content -->
 
 
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-<script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
-</body>
-
-{% endblock content %}
-{% include "footer.html" %}
+{% endblock %}

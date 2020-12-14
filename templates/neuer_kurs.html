@@ -1,0 +1,33 @@
+<!-- import base html -->
+{% extends "scaffold.html" %}
+
+{% block content %}
+
+    <!-- start of content -->
+
+
+
+    <h2>Neuer Kurs anlegen</h2>
+
+<form action="/neuer_kurs" method="POST">
+            <input type="text" name="input_name" placeholder="Kursname"><br>
+
+    <input type="text" name="input_jahrgang" placeholder="Jahrgang">
+        <br>
+        <input type="text" name="input_gueltigkeit" placeholder="Gültigkeit">
+        <br>
+    <input type="text" name="input_voraussetzung" placeholder="Voraussetzung">
+        <br>
+    <input type="text" name="input_fortsetzung" placeholder="Fortsetzung">
+        <br><br>
+
+        <button type="submit">Kurs speichern</button>
+    </form>
+
+
+    {{ success }}
+
+    <!-- end of content -->
+
+
+{% endblock %}

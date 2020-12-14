@@ -1,41 +1,56 @@
-{% include "nav.html" %}
+<!-- import base html -->
+{% extends "scaffold.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-with, initial-scale=1, shrink-to-fit=no">
+{% block content %}
 
-   <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
-    <title>{{ app_name }}</title>
-</head>
-<body>
-<form method="POST">
-        <input type="text" name="name_input" placeholder="Dein Pfadiname">
+    <!-- start of content -->
+
+    <div class="row">
+    <div class="col">
+
+    <h2>Noch nicht registriert?</h2>
+
+<form action="/eingabe" method="POST">
+            <input type="email" name="input_email" placeholder="Gib deine E-Mail ein."><br>
+
+    <input type="text" name="input_name" placeholder="Dein Pfadiname">
         <br>
-        <input type="text" name="jahrgang" placeholder="Welcher Jahrgang hast du?">
+        <input type="number" name="input_jahrgang" placeholder="Welcher Jahrgang hast du?">
         <br>
 
         <label for="kurs">Dein letzter Kurs?</label>
         <br>
-        <select name="kurs">
+        <select name="input_kurs">
             <option value=""disabled selected hidden>Kurs wählen
             <option value="keiner">keiner</option>
-            <option value="Futurakurs">Futurakurs</option>
-            <option value="Basiskurs">Basiskurs</option>
-            <option value="Aufbaukurs">Aufbaukurs</option>
-            <option value="Panoramakurs">Panoramakurs</option>
+            {% for kurs in kurse %}
+            <option value="{{ kurs['name'] }}">{{ kurs['name'] }}</option>
+
+            {% endfor %}
         </select>
         <br>
-        <input type="text" name="jahr" placeholder="In welchem Jahr hast du diesen Kurs gemacht?">
+        <input type="number" name="input_jahr" placeholder="In welchem Jahr hast du diesen Kurs gemacht?">
         <br>
         <button type="submit">Eingabe speichern</button>
     </form>
 
+        </div>
 
-</body>
-</html>
+    <div class="col">
+        <h2>Bereits registriert?</h2>
+        <form action="/empfehlung" method="POST">
+            <input type="email" name="input_email" placeholder="Gib deine E-Mail ein."><br>
+            <button type="submit">Empfehlung zeigen</button>
 
-{% include "footer.html" %}
+        </form>
+        {{ error }}
+
+
+    </div>
+
+        </div>
+
+    <!-- end of content -->
+
+
+{% endblock %}
