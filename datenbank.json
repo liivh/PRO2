@@ -10,5 +10,11 @@
         "jahrgang": "2001",
         "kurs": "Basiskurs",
         "jahr": "2020"
+    },
+    "knox@knox.ch": {
+        "name": "knox",
+        "jahrgang": "2000",
+        "kurs": "Aufbaukurs",
+        "jahr": "2018"
     }
 }
