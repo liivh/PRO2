@@ -1,5 +1,7 @@
 import json
 
+from collections import Counter
+
 # Funktion zum Speichern des Eintrags
 def speichern(email, name, jahrgang, kurs, jahr):
     try:
@@ -48,6 +50,15 @@ def get_recs(email):
             recs_list.append(kurs["name"])
 
     return recs_list
+
+def alle_kurse():
+    kurse = laden_datenbank()
+    kurs_liste = []
+    for kurs in kurse.values():
+        kurs_liste.append(kurs["kurs"])
+    ergebnis=Counter(kurs_liste)
+    return ergebnis
+
 
 
 def kurs_speichern(name, jahrgang, gueltigkeit, voraussetzung, fortsetzung):

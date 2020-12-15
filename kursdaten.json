@@ -33,5 +33,12 @@
         "gueltigkeit": 2,
         "voraussetzung": "Aufbaukurs",
         "fortsetzung": "AL-Kurs"
+    },
+    {
+        "name": "Panokus",
+        "jahrgang": "2004",
+        "gueltigkeit": "2",
+        "voraussetzung": "Basis",
+        "fortsetzung": "Spektrum"
     }
 ]

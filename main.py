@@ -2,7 +2,14 @@ from flask import Flask
 from flask import render_template
 from flask import request
 
+import plotly.express as px
+import plotly
+
+from collections import Counter
+
 from libs.daten import *
+
+
 
 app = Flask("Kursfinder")
 
@@ -52,7 +59,18 @@ def neuer_kurs():
         return render_template('neuer_kurs.html', app_name="Kursfinder - Neuer Kurs", success=success)
     return render_template('neuer_kurs.html', app_name="Kursfinder - Neuer Kurs")
 
+@app.route('/grafik')
+def grafik():
+    alle_interessierte = alle_kurse()
+    kurse = list(alle_interessierte.keys())
+    anzahl = list(alle_interessierte.values())
+
+    fig = px.bar(x=kurse, y=anzahl)
+    div = plotly.io.to_html(fig, include_plotlyjs=True, full_html=False)
+
+    return render_template('grafik.html', app_name="Kursfinder", plotly_div=div)
+
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
-

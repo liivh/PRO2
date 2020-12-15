@@ -1,0 +1,11 @@
+{% extends "vorlage.html" %}
+
+{% block content %}
+
+
+<h2>Kursplatzplanung</h2>
+<p>So sieht die Kursnachfrage für das nächste Jahr aus.</p>
+
+{{ plotly_div|safe }} <!-- ohne safe wird javascript nur als Text ausgeführt, Sicherheitsmassnahme von Python -->
+
+{% endblock %}
