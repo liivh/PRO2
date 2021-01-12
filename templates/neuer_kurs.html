@@ -8,21 +8,21 @@
 
 
     <h2>Neuer Kurs anlegen</h2>
-<p> Fehlt ein Kurs in der Datenbank, dann lege ihn selber an</p>
+<p> Fehlt ein Kurs in der Datenbank? Dann lege ihn doch hier an</p>
 
 <form action="/neuer_kurs" method="POST">
-            <input type="text" name="input_name" placeholder="Kursname"><br>
+            <input type="text" name="input_name" class="form-control" placeholder="Kursname"><br>
 
-    <input type="text" name="input_jahrgang" placeholder="Jahrgang">
+    <input type="text" name="input_jahrgang" class="form-control" placeholder="Jahrgang">
         <br>
-        <input type="text" name="input_gueltigkeit" placeholder="Gültigkeit">
+        <input type="text" name="input_gueltigkeit" class="form-control" placeholder="Gültigkeit">
         <br>
-    <input type="text" name="input_voraussetzung" placeholder="Voraussetzung">
+    <input type="text" name="input_voraussetzung" class="form-control" placeholder="Voraussetzung">
         <br>
-    <input type="text" name="input_fortsetzung" placeholder="Fortsetzung">
+    <input type="text" name="input_fortsetzung" class="form-control" placeholder="Fortsetzung">
         <br><br>
 
-        <button type="submit">Kurs speichern</button>
+        <button type="submit" class="btn btn-info">Kurs speichern</button>
     </form>
 
 

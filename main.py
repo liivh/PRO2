@@ -1,14 +1,11 @@
 from flask import Flask
 from flask import render_template
-from flask import request
+from flask import request, url_for
 
 import plotly.express as px
 import plotly
 
-from collections import Counter
-
 from libs.daten import *
-
 
 
 app = Flask("Kursfinder")
@@ -40,10 +37,28 @@ def empfehlung():
     if request.method == "POST":
         email = request.form['input_email']
         if check_email(email) is False:
-            return render_template('eingabe.html', app_name="Kursfinder - Empfehlung", error="E-Mail nicht vorhanden. Zuerst registrieren!")
+            return render_template('eingabe.html', kurse=laden_kursdaten(), app_name="Kursfinder - Empfehlung", error="E-Mail nicht vorhanden. Zuerst registrieren!")
         recs_list = get_recs(email)
-        return render_template('empfehlung.html', app_name="Kursfinder - Empfehlung", recs_list=recs_list)
+        return render_template('empfehlung.html', app_name="Kursfinder - Empfehlung", recs_list=recs_list, email=email,
+                               db=laden_datenbank(), kurse=laden_kursdaten())
     return render_template('empfehlung.html', app_name="Kursfinder - Empfehlung")
+
+
+@app.route('/empfehlung/edit/<email>', methods=['POST', 'GET'])
+def kurs_edit(email):
+    if request.method == "POST":
+        name = request.form['edit_name']
+        jahrgang = request.form['edit_jahrgang']
+        kurs = request.form['edit_kurs']
+        jahr = request.form['edit_jahr']
+        speichern(str(email), name, jahrgang, kurs, jahr)
+        recs_list = get_recs(email)
+        return render_template('empfehlung.html', app_name="Kursfinder - Empfehlung", recs_list=recs_list,
+                               email=email, db=laden_datenbank(), kurse=laden_kursdaten())
+
+
+
+
 
 
 @app.route('/neuer_kurs', methods=['POST', 'GET'])

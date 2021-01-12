@@ -14,13 +14,6 @@
         "fortsetzung": "Aufbaukurs"
     },
     {
-        "name": "Sicherheitsmodul",
-        "jahrgang": 2004,
-        "gueltigkeit": 2,
-        "voraussetzung": "Basiskurs",
-        "fortsetzung": "Aufbaukurs"
-    },
-    {
         "name": "Aufbaukurs",
         "jahrgang": 2003,
         "gueltigkeit": 2,
@@ -28,17 +21,17 @@
         "fortsetzung": "Panoramakurs"
     },
     {
+        "name": "Spektrumkurs",
+        "jahrgang": "2002",
+        "gueltigkeit": "2",
+        "voraussetzung": "AL-Kurs",
+        "fortsetzung": "Gilwellkurs"
+    },
+    {
         "name": "Panoramakurs",
         "jahrgang": 2002,
         "gueltigkeit": 2,
         "voraussetzung": "Aufbaukurs",
         "fortsetzung": "AL-Kurs"
-    },
-    {
-        "name": "Panokus",
-        "jahrgang": "2004",
-        "gueltigkeit": "2",
-        "voraussetzung": "Basis",
-        "fortsetzung": "Spektrum"
     }
 ]

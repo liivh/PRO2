@@ -11,16 +11,16 @@
     <h2>Noch nicht registriert?</h2>
 
 <form action="/eingabe" method="POST">
-            <input type="email" name="input_email" placeholder="Gib deine E-Mail ein."><br>
+            <input type="email" name="input_email" class="form-control" placeholder="Gib deine E-Mail ein."><br>
 
-    <input type="text" name="input_name" placeholder="Dein Pfadiname">
+    <input type="text" name="input_name" class="form-control" placeholder="Dein Pfadiname">
         <br>
-        <input type="number" name="input_jahrgang" placeholder="Welcher Jahrgang hast du?">
+        <input type="number" name="input_jahrgang" class="form-control" placeholder="Welcher Jahrgang hast du?">
         <br>
 
         <label for="kurs">Dein letzter Kurs?</label>
         <br>
-        <select name="input_kurs">
+        <select name="input_kurs" class="form-control">
             <option value=""disabled selected hidden>Kurs wählen
             <option value="keiner">keiner</option>
             {% for kurs in kurse %}
@@ -29,9 +29,9 @@
             {% endfor %}
         </select>
         <br>
-        <input type="number" name="input_jahr" placeholder="In welchem Jahr hast du diesen Kurs gemacht?">
+        <input type="number" name="input_jahr" class="form-control" placeholder="In welchem Jahr hast du diesen Kurs gemacht?">
         <br>
-        <button type="submit">Eingabe speichern</button>
+        <button type="submit" class="btn btn-info" >Eingabe speichern</button>
     </form>
 
         </div>
@@ -39,8 +39,8 @@
     <div class="col">
         <h2>Bereits registriert?</h2>
         <form action="/empfehlung" method="POST">
-            <input type="email" name="input_email" placeholder="Gib deine E-Mail ein."><br>
-            <button type="submit">Empfehlung zeigen</button>
+            <input type="email" name="input_email" class="form-control" placeholder="Gib deine E-Mail ein."><br>
+            <button type="submit" class="btn btn-info">Empfehlung zeigen</button>
 
         </form>
         {{ error }}
@@ -49,7 +49,6 @@
     </div>
 
         </div>
-
 
     <!-- end of content -->
 

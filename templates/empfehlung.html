@@ -3,13 +3,95 @@
 
 {% block content %}
 
-    <!-- start of content -->
+<!-- start of content -->
 
-    <h1>Deine Empfehlungen</h1>
+<h1>Deine Empfehlungen</h1>
 
-    {{ recs_list }}
+<p>Dein Name: {{ db[email]["name"] }}</p>
+<p>Jahrgang: {{ db[email]["jahrgang"] }}</p>
+<p>E-Mail: {{ email }}</p>
+<p>Letzter Kurs: {{ db[email]["kurs"] }}</p>
+<p>Kursjahr: {{ db[email]["jahr"] }}</p>
 
-    <!-- end of content -->
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Daten bearbeiten
+</button>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Bearbeiten</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+
+                <form action="/empfehlung/edit/{{ email }}" method="POST">
+                    <p>E-Mail:</p>
+                    <input type="text" name="edit_name" value="{{ db[email]['name'] }}" class="form-control"><br>
+                    <p>Jahrgang</p>
+                    <input type="number" name="edit_jahrgang" value="{{ db[email]['jahrgang'] }}" class="form-control">
+                    <br>
+
+                    <label for="kurs">Dein letzter Kurs?</label>
+                    <br>
+
+                    <select name="edit_kurs" class="form-control">
+            <option value="{{ db[email]['kurs'] }}" selected>{{ db[email]["kurs"] }}
+            {% for kurs in kurse %}
+                        {% if kurs['name'] != db[email]["kurs"] %}
+            <option value="{{ kurs['name'] }}">{{ kurs['name'] }}</option>
+                        {% endif %}
+
+            {% endfor %}
+        </select>
+                    <br>
+                    <p>Kursjahr:</p>
+                    <input type="number" name="edit_jahr" class="form-control" value="{{ db[email]['jahr'] }}">
+
+                    <br>
+                    <button type="submit" class="btn btn-info">Speichern</button>
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!-- end of modal -->
+
+<h3>Kurse:</h3>
+
+<div class="row">
+
+    <div class="col-md-4">
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Kursname</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for kurs in recs_list %}
+            <tr>
+                <td>{{ kurs }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<!-- end of content -->
 
 
 {% endblock %}

@@ -1,86 +1,86 @@
 {
-    "meret.andrini@gmail.com": {
-        "name": "akila",
-        "jahrgang": "2001",
+    "livia.hebeisen@me.com": {
+        "name": "Wuika",
+        "jahrgang": "1997",
         "kurs": "Basiskurs",
-        "jahr": "2019"
+        "jahr": "2015"
     },
-    "tara@tara.com": {
+    "akila@akila.ch": {
+        "name": "Akila",
+        "jahrgang": "2001",
+        "kurs": "keiner",
+        "jahr": "2001"
+    },
+    "tara@tara.ch": {
         "name": "tara",
-        "jahrgang": "2001",
-        "kurs": "Basiskurs",
-        "jahr": "2020"
-    },
-    "knox@knox.ch": {
-        "name": "knox",
         "jahrgang": "2000",
         "kurs": "Aufbaukurs",
-        "jahr": "2018"
+        "jahr": "2020"
     },
-    "kili@kili.com": {
-        "name": "akila",
-        "jahrgang": "2001",
-        "kurs": "Basiskurs",
-        "jahr": "2019"
-    },
-    "livia.hebeisen@icloud.com": {
-        "name": "wuikaaa",
-        "jahrgang": "1997",
-        "kurs": "Aufbaukurs",
-        "jahr": "2019"
-    },
-    "nuvola@gmail.ch": {
-        "name": "nuvola",
-        "jahrgang": "1995",
-        "kurs": "Aufbaukurs",
-        "jahr": "2016"
-    },
-    "livia.hebeisen@mee.com": {
-        "name": "wuikila",
-        "jahrgang": "1007",
-        "kurs": "Basiskurs",
+    "livia.hebeisen@gmail.com": {
+        "name": "wuika",
+        "jahrgang": "2000",
+        "kurs": "Sicherheitsmodul",
         "jahr": "2017"
     },
-    "livia.hebeisen@ii.com": {
-        "name": "wuik",
-        "jahrgang": "1998",
-        "kurs": "Aufbaukurs",
-        "jahr": "2019"
+    "hans.meiser@test.ch": {
+        "name": "Hanswurst",
+        "jahrgang": "2003",
+        "kurs": "Futurakurs",
+        "jahr": "2010"
     },
-    "liv@heb.ch": {
-        "name": "falu",
-        "jahrgang": "1006",
-        "kurs": "Aufbaukurs",
-        "jahr": "2019"
-    },
-    "livia@icloud.com": {
-        "name": "akila",
-        "jahrgang": "1999",
-        "kurs": "Aufbaukurs",
-        "jahr": "2019"
-    },
-    "livia.hebeisen@iiii.com": {
-        "name": "wuik",
-        "jahrgang": "1999",
-        "kurs": "Aufbaukurs",
-        "jahr": "2019"
-    },
-    "liv@liv.ch": {
-        "name": "liv",
-        "jahrgang": "1996",
-        "kurs": "Aufbaukurs",
-        "jahr": "2020"
-    },
-    "livliv@liv.ch": {
-        "name": "livia",
-        "jahrgang": "1995",
-        "kurs": "Aufbaukurs",
-        "jahr": "2020"
-    },
-    "aki@lubra.ch": {
-        "name": "aki",
+    "livia.hebeisen@icloud2.com": {
+        "name": "wuika",
         "jahrgang": "2000",
         "kurs": "Basiskurs",
         "jahr": "2019"
+    },
+    "": {
+        "name": "",
+        "jahrgang": "",
+        "kurs": "Basiskurs",
+        "jahr": ""
+    },
+    "livia.hebeisen@icloud3.com": {
+        "name": "hahj",
+        "jahrgang": "2000",
+        "kurs": "Aufbaukurs",
+        "jahr": "2019"
+    },
+    "asd@asd.ch": {
+        "name": "kahjgs",
+        "jahrgang": "2000",
+        "kurs": "Aufbaukurs",
+        "jahr": "2019"
+    },
+    "livia.hebeisen@iud.com": {
+        "name": "fdsf",
+        "jahrgang": "2000",
+        "kurs": "keiner",
+        "jahr": "0"
+    },
+    "livia.hebeisen@iclo34d.com": {
+        "name": "asdf",
+        "jahrgang": "2000",
+        "kurs": "Futurakurs",
+        "jahr": ""
+    },
+    "livia.hebeisen@iclou3d.com": {
+        "name": "asdf",
+        "jahrgang": "2000",
+        "kurs": "keiner",
+        "jahr": ""
+    },
+    "asd@ffasd.ch": {
+        "name": "asdf",
+        "jahrgang": "2000",
+        "kurs": "Panoramakurs",
+        "jahr": "2000"
+    },
+    "livia.hebeisen@icloud.com": {
+        "name": "Wuika",
+        "jahrgang": "2009",
+        "kurs": "Futurakurs",
+        "jahr": "2020"
     }
 }

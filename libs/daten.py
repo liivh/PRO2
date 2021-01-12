@@ -45,9 +45,15 @@ def get_recs(email):
 
     recs_list = []
 
-    for kurs in kurse:
-        if kurs["voraussetzung"] == abfrage_kurs and int(kurs["jahrgang"]) >= abfrage_jahrgang:
-            recs_list.append(kurs["name"])
+    if abfrage_kurs == "keiner":
+        recs_list.append("Futurakurs")
+    elif abfrage_kurs == "Futurakurs":
+       recs_list.append("Basiskurs")
+    else:
+        for kurs in kurse:
+            if kurs["voraussetzung"] == abfrage_kurs and int(kurs["jahrgang"]) >= abfrage_jahrgang:
+                recs_list.append(kurs["name"])
+        recs_list.append("Sicherheitsmodul")
 
     return recs_list
 
