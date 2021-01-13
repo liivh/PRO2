@@ -1,86 +1,8 @@
 {
-    "livia.hebeisen@me.com": {
-        "name": "Wuika",
-        "jahrgang": "1997",
-        "kurs": "Basiskurs",
-        "jahr": "2015"
-    },
-    "akila@akila.ch": {
-        "name": "Akila",
+    "tara@lubra.ch": {
+        "name": "Tara",
         "jahrgang": "2001",
-        "kurs": "keiner",
-        "jahr": "2001"
-    },
-    "tara@tara.ch": {
-        "name": "tara",
-        "jahrgang": "2000",
-        "kurs": "Aufbaukurs",
-        "jahr": "2020"
-    },
-    "livia.hebeisen@gmail.com": {
-        "name": "wuika",
-        "jahrgang": "2000",
-        "kurs": "Sicherheitsmodul",
-        "jahr": "2017"
-    },
-    "hans.meiser@test.ch": {
-        "name": "Hanswurst",
-        "jahrgang": "2003",
-        "kurs": "Futurakurs",
-        "jahr": "2010"
-    },
-    "livia.hebeisen@icloud2.com": {
-        "name": "wuika",
-        "jahrgang": "2000",
         "kurs": "Basiskurs",
         "jahr": "2019"
-    },
-    "": {
-        "name": "",
-        "jahrgang": "",
-        "kurs": "Basiskurs",
-        "jahr": ""
-    },
-    "livia.hebeisen@icloud3.com": {
-        "name": "hahj",
-        "jahrgang": "2000",
-        "kurs": "Aufbaukurs",
-        "jahr": "2019"
-    },
-    "asd@asd.ch": {
-        "name": "kahjgs",
-        "jahrgang": "2000",
-        "kurs": "Aufbaukurs",
-        "jahr": "2019"
-    },
-    "livia.hebeisen@iud.com": {
-        "name": "fdsf",
-        "jahrgang": "2000",
-        "kurs": "keiner",
-        "jahr": "0"
-    },
-    "livia.hebeisen@iclo34d.com": {
-        "name": "asdf",
-        "jahrgang": "2000",
-        "kurs": "Futurakurs",
-        "jahr": ""
-    },
-    "livia.hebeisen@iclou3d.com": {
-        "name": "asdf",
-        "jahrgang": "2000",
-        "kurs": "keiner",
-        "jahr": ""
-    },
-    "asd@ffasd.ch": {
-        "name": "asdf",
-        "jahrgang": "2000",
-        "kurs": "Panoramakurs",
-        "jahr": "2000"
-    },
-    "livia.hebeisen@icloud.com": {
-        "name": "Wuika",
-        "jahrgang": "2009",
-        "kurs": "Futurakurs",
-        "jahr": "2020"
     }
 }
