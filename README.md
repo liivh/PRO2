@@ -11,9 +11,9 @@ Das Ganze wird von einem Diagramm visuell unterstützt.
 
 ## Installationen
 Damit der Kursfinder funktioniert, müssen folgende Module installiert werden:
-Flask
-Collections
-Plotly
+Flask (Flask, render_template, request, url_for)
+Collections (Counter) zum die Kurse zu zählen
+Plotly (plotly.express as px) für die Darstellung des Diagramms
 
 
 
