@@ -1,6 +1,10 @@
-#Projektidee Livia Hebeisen
+#Projekt Livia Hebeisen
 
 Diese Projekt ist im Rahmen der Projektarbeit des Moduls "Programmierung 2" des Studienganges "Digital Business Management" der Fachhochschule Graubünden entstanden. 
+
+__Name Github:__ liivh <br>
+__Webapplikation:__ Kursfinder <br>
+
 
 ## Ausgangslage:
 Als Pfadfinder hat man die Möglichkeit verschiedene Ausbildungskurse zu machen. Sobald man ein gewisses Alter erreicht hat, kann man J+S Ausbildungskurse für Lagersport / Trekking besuchen. Nach dem Basiskurs können verschiedenste Aus- und Weiterbildungen gemacht werden. Dabei ist es für viele immer sehr verwirrend, welcher Kurs wann und mit welchen Vorbedingungen besucht werden kann. Da dies Abhängig vom Alter, Ausbildungskurs und Datum des besuchten Kurs abhängt.
@@ -14,8 +18,6 @@ Damit der Kursfinder funktioniert, müssen folgende Module installiert werden:
 Flask (Flask, render_template, request, url_for)
 Collections (Counter) zum die Kurse zu zählen
 Plotly (plotly.express as px) für die Darstellung des Diagramms
-
-
 
 ## Ablauf
 
@@ -44,21 +46,21 @@ Mit dem Button "Kurs speichern" wird der Kurs in der Datenbank gespeichert.
 ## Ausbildungsstand Kanton
 Anhand der Grafik im Register "Ausbildungsstand Katon" kann analysiert werden, wie gut die Leitenden im Kanton ausgebildet sind. Daraus lässt sich schliessen, wo noch in der Ausbildung in der Pfadi investiert und Leitende gefördert werden müssen.
 
-## Workflow
+## Flussdiagramm
 ![alt text]
 (https://github.com/liivh/PROG2/blob/master/Flussdiagramm_Kursfinder.png)
 
 ### Dateneingabe:
-Persönliche Daten im Eingabeformular, zum Registrieren
-E-Mail Adresse, wenn bereits registriert
-neuer Kurs anlegen
+- Persönliche Daten im Eingabeformular, zum Registrieren
+- E-Mail Adresse, wenn bereits registriert
+- neuer Kurs anlegen
 
 
 ### Datenverarbeitung / Speichern
-Bearbeitung der persönlichen Daten, um eine Empfehlung abgeben zu können
+- Bearbeitung der persönlichen Daten, um eine Empfehlung abgeben zu können
 
 ### Datenausgabe:
-Empfehlungen / Nutzerdaten
-Balkendiagramm
+- Empfehlungen / Nutzerdaten
+- Balkendiagramm
 
 

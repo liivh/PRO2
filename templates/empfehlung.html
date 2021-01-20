@@ -4,7 +4,6 @@
 {% block content %}
 
 <!-- start of content -->
-
 <h1>Deine Angaben</h1>
 
 <p>Dein Name: {{ db[email]["name"] }}</p>
@@ -45,14 +44,14 @@
                     <br>
 
                     <select name="edit_kurs" class="form-control">
-            <option value="{{ db[email]['kurs'] }}" selected>{{ db[email]["kurs"] }}
-            {% for kurs in kurse %}
-                        {% if kurs['name'] != db[email]["kurs"] %}
-            <option value="{{ kurs['name'] }}">{{ kurs['name'] }}</option>
+                        <option value="{{ db[email]['kurs'] }}" selected>{{ db[email]["kurs"] }}
+                            {% for kurs in kurse %}
+                            {% if kurs['name'] != db[email]["kurs"] %}
+                        <option value="{{ kurs['name'] }}">{{ kurs['name'] }}</option>
                         {% endif %}
 
-            {% endfor %}
-        </select>
+                        {% endfor %}
+                    </select>
                     <br>
                     <p>Kursjahr:</p>
                     <input type="number" name="edit_jahr" class="form-control" value="{{ db[email]['jahr'] }}">

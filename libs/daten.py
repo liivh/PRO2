@@ -53,12 +53,6 @@ def get_recs(email):
     elif abfrage_kurs == "Futurakurs":
        recs_list.append("Basiskurs")
     else:
-    """
-    hat der Nutzer einen anderen Kurs ausser die beiden Obenstehenden gemacht, wird diese Funktion ausgeführt.
-    Der eingegebene Kurs des Nutzers wird mit den Voraussetzungen in der datenbank.json abgeglichen und der empfohlene
-    Kurs wieder der Empfehlungsliste (recs_list) angefügt.
-    Des Weiteren wird ab hier immer das Sicherheitsmodul empfohlen
-    """
         for kurs in kurse:
             if kurs["voraussetzung"] == abfrage_kurs and int(kurs["jahrgang"]) >= abfrage_jahrgang:
                 recs_list.append(kurs["name"])

@@ -10,5 +10,23 @@
         "jahrgang": "2001",
         "kurs": "Basiskurs",
         "jahr": "2018"
+    },
+    "falena@lubra.ch": {
+        "name": "Falena",
+        "jahrgang": "1996",
+        "kurs": "Basiskurs",
+        "jahr": "2018"
+    },
+    "cara@lubra.ch": {
+        "name": "Cara",
+        "jahrgang": "1998",
+        "kurs": "Basiskurs",
+        "jahr": "2018"
+    },
+    "sdf@a.ch": {
+        "name": "sdfsdf",
+        "jahrgang": "1997",
+        "kurs": "Futurakurs",
+        "jahr": "2000"
     }
 }

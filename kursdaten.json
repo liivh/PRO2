@@ -33,5 +33,12 @@
         "gueltigkeit": 2,
         "voraussetzung": "Aufbaukurs",
         "fortsetzung": "AL-Kurs"
+    },
+    {
+        "name": "wef",
+        "jahrgang": "1997",
+        "gueltigkeit": "2",
+        "voraussetzung": "af",
+        "fortsetzung": "sdf"
     }
 ]
