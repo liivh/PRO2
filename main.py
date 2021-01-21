@@ -18,12 +18,13 @@ app = Flask("Kursfinder")
 def start():
     ueberschrifts_text = "Willkommen auf der Kursfinder Website"
     einleitung_text = "Hier kannst du herausfinden, welchen Pfadikurs du als nächstes besuchen kannst"
+    # Start.html Template wird gerendert, um diese anzuzeigen
     return render_template("start.html", app_name="Kursfinder", ueberschrift=ueberschrifts_text, einleitung=einleitung_text)
 
 # Eingabeseite der Webapplikation
 @app.route('/eingabe', methods=['POST', 'GET'])
 def eingabe():
-    # Werte des Formulars werden abgefangen
+    # Werte des Formulars aus eingabe.html werden abgefangen und gespeichert
     if request.method == "POST":
         email = request.form['input_email']
         name = request.form['input_name']
@@ -31,7 +32,7 @@ def eingabe():
         kurs = request.form['input_kurs']
         jahr = request.form['input_jahr']
         speichern(str(email), name, jahrgang, kurs, jahr)
-        # Erfasst der Benutzer seine Daten wird er dann direkt auf die Empfehlungseite (empfehlung) weitergeleitet
+        # Erfasst der Benutzer seine Daten wird er dann direkt mit redirect auf die Empfehlungseite (empfehlung) weitergeleitet
         return redirect(url_for('empfehlung', email=email))
     return render_template('eingabe.html', app_name="Kursfinder - Eingabe", kurse=laden_kursdaten())
 
@@ -55,6 +56,7 @@ def empfehlung():
 
 # Funktion, wenn der Benutzer seine Benutzerdaten anpasst
 @app.route('/empfehlung/edit/<email>', methods=['POST', 'GET'])
+# URL-Parameter -> damit Applikation weiss, welche Benutzerdaten angepasst werden
 def kurs_edit(email):
     if request.method == "POST":
         # Werte des Formulars werden abgefangen
@@ -97,9 +99,9 @@ def grafik():
 
     # mit plotly wird die Visualisierung erstellt
     fig = px.bar(x=kurse, y=anzahl)
-    # Visualisierung wird in html Elemt umgewandelt
+    # Visualisierung wird in html Element umgewandelt
     div = plotly.io.to_html(fig, include_plotlyjs=True, full_html=False)
-    # Angaben von Flask für die Visualisierung
+    # Daten werden in grafik.html gerendert und div mitgegeben
     return render_template('grafik.html', app_name="Kursfinder", plotly_div=div)
 
 

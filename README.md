@@ -18,6 +18,7 @@ Damit der Kursfinder funktioniert, müssen folgende Module installiert werden:
 Flask (Flask, render_template, request, url_for)
 Collections (Counter) zum die Kurse zu zählen
 Plotly (plotly.express as px) für die Darstellung des Diagramms
+Pandas, damit Plotly ausgeführt werden kann
 
 ## Ablauf
 
@@ -50,6 +51,7 @@ Anhand der Grafik im Register "Ausbildungsstand Katon" kann analysiert werden, w
 ![alt text]
 (https://github.com/liivh/PROG2/blob/master/Flussdiagramm_Kursfinder.png)
 
+## Funktionen 
 ### Dateneingabe:
 - Persönliche Daten im Eingabeformular, zum Registrieren
 - E-Mail Adresse, wenn bereits registriert
@@ -62,5 +64,6 @@ Anhand der Grafik im Register "Ausbildungsstand Katon" kann analysiert werden, w
 ### Datenausgabe:
 - Empfehlungen / Nutzerdaten
 - Balkendiagramm
+
 
 

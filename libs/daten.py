@@ -76,7 +76,7 @@ def alle_kurse():
 # Funktion, um ein neuer Kurs zu speichern
 def kurs_speichern(name, jahrgang, gueltigkeit, voraussetzung, fortsetzung):
     kurse = laden_kursdaten()
-    # Neuer Kurs wird als Dict geschrieben
+    # Neuer Kurs wird in Dict geschrieben
     neuer_kurs = {
     "name": name,
     "jahrgang": jahrgang,
