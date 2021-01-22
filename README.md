@@ -48,7 +48,7 @@ Mit dem Button "Kurs speichern" wird der Kurs in der Datenbank gespeichert.
 Anhand der Grafik im Register "Ausbildungsstand Katon" kann analysiert werden, wie gut die Leitenden im Kanton ausgebildet sind. Daraus lässt sich schliessen, wo noch in der Ausbildung in der Pfadi investiert und Leitende gefördert werden müssen.
 
 ## Flussdiagramm
-https://github.com/liivh/PRO2/tree/master/images
+![alt text](https://github.com/liivh/PRO2/blob/master/images/Flussdiagramm_Kursfinder.png)
 
 ## Funktionen 
 ### Dateneingabe:
