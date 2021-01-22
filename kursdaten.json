@@ -20,5 +20,11 @@
         "voraussetzung": "Basiskurs",
         "fortsetzung": "Panoramakurs"
     },
-
+    {
+        "name": "Panoramakurs",
+        "jahrgang": "2001",
+        "gueltigkeit": "2",
+        "voraussetzung": "Aufbaukurs",
+        "fortsetzung": "AL-Kurs"
+    }
 ]

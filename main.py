@@ -1,4 +1,4 @@
-# Damit die Applikation funktioniert müssen sämtliche Module importiert werden.
+# Damit die Applikation funktioniert, müssen sämtliche Module importiert werden.
 
 from flask import Flask
 from flask import render_template
@@ -24,7 +24,7 @@ def start():
 # Eingabeseite der Webapplikation
 @app.route('/eingabe', methods=['POST', 'GET'])
 def eingabe():
-    # Werte des Formulars aus eingabe.html werden abgefangen und gespeichert
+    # Werte des Formulars werden abgefangen und gespeichert
     if request.method == "POST":
         email = request.form['input_email']
         name = request.form['input_name']
@@ -32,7 +32,7 @@ def eingabe():
         kurs = request.form['input_kurs']
         jahr = request.form['input_jahr']
         speichern(str(email), name, jahrgang, kurs, jahr)
-        # Erfasst der Benutzer seine Daten wird er dann direkt mit redirect auf die Empfehlungseite (empfehlung) weitergeleitet
+        # Erfasst der Benutzer seine Daten, wird er dann direkt mit redirect auf die Empfehlungseite (empfehlung.html) weitergeleitet
         return redirect(url_for('empfehlung', email=email))
     return render_template('eingabe.html', app_name="Kursfinder - Eingabe", kurse=laden_kursdaten())
 
@@ -56,7 +56,7 @@ def empfehlung():
 
 # Funktion, wenn der Benutzer seine Benutzerdaten anpasst
 @app.route('/empfehlung/edit/<email>', methods=['POST', 'GET'])
-# URL-Parameter -> damit Applikation weiss, welche Benutzerdaten angepasst werden
+# URL-Parameter -> damit Applikation weiss, welche Benutzerdaten angepasst werden. Anhand der E-Mail Adresse
 def kurs_edit(email):
     if request.method == "POST":
         # Werte des Formulars werden abgefangen

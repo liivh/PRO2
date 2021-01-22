@@ -2,9 +2,10 @@ import json
 
 from collections import Counter
 
-# Funktion zum Speichern des Eintrags
+# Funktion zum Speichern der Eingabe
 def speichern(email, name, jahrgang, kurs, jahr):
     try:
+        # datenbank.json wird als read geöffnet
         with open("datenbank.json", "r") as datenbank:
             eintraege = json.load(datenbank)
     except:
@@ -12,8 +13,8 @@ def speichern(email, name, jahrgang, kurs, jahr):
 
     eintraege[email] = {"name": name, "jahrgang": jahrgang, "kurs": kurs, "jahr": jahr}
 
-
     with open("datenbank.json", "w") as datenbank:
+        # Einträge werden mit json.dump in datenbank.json gedumped
         json.dump(eintraege, datenbank, indent=4)
     return "Daten gespeichert"
 
@@ -30,6 +31,7 @@ def laden_datenbank():
 # Funktion zum Laden der Datenbank mit den Kursdaten
 def laden_kursdaten():
     try:
+        # kursdaten.json wird als read geöffnet und geladen
         with open("kursdaten.json", "r") as datenbank_kursdaten:
             eintraege_kursdaten = json.load(datenbank_kursdaten)
     except:
@@ -52,6 +54,12 @@ def get_recs(email):
     # hat der Nutzer den Futurakurs gemacht, wird der Basiskurs in die Empfehlungsliste (recs_list) geschrieben
     elif abfrage_kurs == "Futurakurs":
        recs_list.append("Basiskurs")
+       """
+       hat der Nutzer einen anderen Kurs ausser die beiden Obenstehenden gemacht, wird diese Funktion ausgeführt.
+       Der eingegebene Kurs des Nutzers wird mit den Voraussetzungen in der datenbank.json abgeglichen und der empfohlene
+       Kurs wieder der Empfehlungsliste (recs_list) angefügt.
+       Des Weiteren wird ab hier immer das Sicherheitsmodul empfohlen.
+       """
     else:
         for kurs in kurse:
             if kurs["voraussetzung"] == abfrage_kurs and int(kurs["jahrgang"]) >= abfrage_jahrgang:
@@ -68,7 +76,7 @@ def alle_kurse():
     # Kurse werden der kurs_liste angefügt
     for kurs in kurse.values():
         kurs_liste.append(kurs["kurs"])
-    # mit dem Counter werden die Empfehlungen in der Kursliste gezählt, um dann im Diagramm darstellen zu können.
+    # mit dem Counter werden die Empfehlungen in der Kursliste gezählt, um diese dann im Diagramm darstellen zu können.
     ergebnis=Counter(kurs_liste)
     return ergebnis
 
@@ -83,8 +91,10 @@ def kurs_speichern(name, jahrgang, gueltigkeit, voraussetzung, fortsetzung):
     "gueltigkeit": gueltigkeit,
     "voraussetzung": voraussetzung,
     "fortsetzung": fortsetzung
-  }
+}
+    # Neuer Kurs wird mit append den Kursen hinzugefügt
     kurse.append(neuer_kurs)
+    # Neuer Kurs wird in kursdaten.json gedumped
     with open("kursdaten.json", "w") as datenbank_kursdaten:
         json.dump(kurse, datenbank_kursdaten, indent=4)
 

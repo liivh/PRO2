@@ -1,15 +1,38 @@
 {
+    "falena@lubra.ch": {
+        "name": "Falena",
+        "jahrgang": "1996",
+        "kurs": "Aufbaukurs",
+        "jahr": "2018"
+    },
     "tara@lubra.ch": {
         "name": "Tara",
         "jahrgang": "2001",
         "kurs": "Basiskurs",
-        "jahr": "2019"
+        "jahr": "2020"
     },
     "akila@lubra.ch": {
         "name": "Akila",
         "jahrgang": "2001",
         "kurs": "Basiskurs",
-        "jahr": "2018"
+        "jahr": "2019"
     },
-
+    "diego@pfadibern.ch": {
+        "name": "Diego",
+        "jahrgang": "1992",
+        "kurs": "Aufbaukurs",
+        "jahr": "2015"
+    },
+    "assura@pfadibern.ch": {
+        "name": "Assura",
+        "jahrgang": "1995",
+        "kurs": "Panoramakurs",
+        "jahr": "2017"
+    },
+    "wuika@pfadilubra.ch": {
+        "name": "Wuika",
+        "jahrgang": "1997",
+        "kurs": "Aufbaukurs",
+        "jahr": "2019"
+    }
 }
