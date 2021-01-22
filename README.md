@@ -49,7 +49,7 @@ Anhand der Grafik im Register "Ausbildungsstand Katon" kann analysiert werden, w
 
 ## Flussdiagramm
 ![alt text]
-(https://github.com/liivh/PROG2/blob/master/Flussdiagramm_Kursfinder.png)
+(https://github.com/liivh/PRO2/tree/master/images)
 
 ## Funktionen 
 ### Dateneingabe:
